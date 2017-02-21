@@ -1,0 +1,68 @@
+.c-navbar-wrapper.clearfix
+            .c-brand.c-pull-left
+              a.c-logo(href='index-2.html')
+                img.c-desktop-logo(src='https://res.cloudinary.com/stork/raw/upload/v1487618974/egc82tzisvglofflicw8.png', alt='JANGO')
+                img.c-desktop-logo-inverse(src='https://res.cloudinary.com/stork/raw/upload/v1487618974/egc82tzisvglofflicw8.png', alt='JANGO')
+                img.c-mobile-logo(src='https://res.cloudinary.com/stork/raw/upload/v1487618974/egc82tzisvglofflicw8.png', alt='JANGO')
+              button.c-hor-nav-toggler(type='button', data-target='.c-mega-menu')
+                span.c-line
+                span.c-line
+                span.c-line
+              button.c-topbar-toggler(type='button')
+                i.fa.fa-ellipsis-v
+              button.c-search-toggler(type='button')
+                i.fa.fa-search
+              button.c-cart-toggler(type='button')
+                i.icon-handbag
+                span.c-cart-number.c-theme-bg 2
+            // END: BRAND
+            // BEGIN: QUICK SEARCH
+            form.c-quick-search(action='#')
+              input.form-control(type='text', name='query', placeholder='Type to search...', value='', autocomplete='off')
+              span.c-theme-link ×
+            // END: QUICK SEARCH
+            // BEGIN: HOR NAV
+            // BEGIN: LAYOUT/HEADERS/MEGA-MENU
+            // BEGIN: MEGA MENU
+            // Dropdown menu toggle on mobile: c-toggler class can be applied to the link arrow or link itself depending on toggle mode
+            nav.c-mega-menu.c-pull-right.c-mega-menu-dark.c-mega-menu-dark-mobile.c-fonts-uppercase.c-fonts-bold
+              ul.nav.navbar-nav.c-theme-nav
+                li#index.c-active
+                  a.c-link.dropdown-toggle(href='/')
+                    | Inicio
+                li#aboutus.c-menu-type-classic
+                  a.c-link.dropdown-toggle(href='/aboutus')
+                    | Nosotros
+                li#products
+                  a.c-link.dropdown-toggle(href='/products')
+                    | Productos
+                li#contactus
+                  a.c-link.dropdown-toggle(href='/contactus')
+                    | Contactos
+                
+                li.c-search-toggler-wrapper
+                  a.c-btn-icon.c-search-toggler(href='#')
+                    i.fa.fa-search
+                li.c-cart-toggler-wrapper
+                  a.c-btn-icon.c-cart-toggler(href='#')
+                    i.icon-handbag.c-cart-icon
+                    span.c-cart-number.c-theme-bg 2
+                if user
+                  li#dashboard
+                    a.c-link.dropdown-toggle(href='/dashboard')
+                      | Mi cuenta 
+                  li#logout
+                    a.c-link.dropdown-toggle(href='javascript:;')
+                      | Salir 
+                      i.icon-logout
+                else
+                  li#login
+                    a.c-link.dropdown-toggle(href='/login')
+                      | Ingresar 
+                      i.icon-user
+                
+                    
+                
+            // END: MEGA MENU
+            // END: LAYOUT/HEADERS/MEGA-MENU
+            // END: HOR NAV

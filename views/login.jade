@@ -1,0 +1,233 @@
+doctype html
+
+html(lang='en')
+
+  meta(http-equiv='content-type', content='text/html;charset=UTF-8')
+
+  head
+    meta(charset='utf-8')
+    title Butterfly | Login
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(http-equiv='Content-type', content='text/html; charset=utf-8')
+    meta(content='', name='description')
+    meta(content='', name='author')
+    // BEGIN GLOBAL MANDATORY STYLES
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&subset=all', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/socicon/socicon.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/bootstrap-social/bootstrap-social.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/simple-line-icons/simple-line-icons.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/animate/animate.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/bootstrap/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // END GLOBAL MANDATORY STYLES
+    // BEGIN: BASE PLUGINS
+    link(href='assets/plugins/cubeportfolio/css/cubeportfolio.min.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/owl-carousel/assets/owl.carousel.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/fancybox/jquery.fancybox.css', rel='stylesheet', type='text/css')
+    link(href='assets/plugins/slider-for-bootstrap/css/slider.css', rel='stylesheet', type='text/css')
+    // END: BASE PLUGINS
+    // BEGIN THEME STYLES
+    link(href='assets/base/css/plugins.css', rel='stylesheet', type='text/css')
+    link#style_components(href='assets/base/css/components.css', rel='stylesheet', type='text/css')
+    link#style_theme(href='assets/base/css/themes/default.css', rel='stylesheet', type='text/css')
+    link(href='assets/base/css/custom.css', rel='stylesheet', type='text/css')
+    // END THEME STYLES
+    link(rel='shortcut icon', href='favicon.ico')
+  body.c-layout-header-fixed.c-layout-header-mobile-fixed.c-layout-header-topbar.c-layout-header-topbar-collapse
+    // BEGIN: LAYOUT/HEADERS/HEADER-1
+    // BEGIN: HEADER
+    header.c-layout-header.c-layout-header-4.c-layout-header-default-mobile(data-minimize-offset='80')
+      .c-topbar.c-topbar-light.c-solid-bg
+        include index_topbar
+      .c-navbar
+        .container
+          // BEGIN: BRAND
+          include index_menu
+          // BEGIN: LAYOUT/HEADERS/QUICK-CART
+          // BEGIN: CART MENU
+          include index_cart
+          // END: CART MENU
+          // END: LAYOUT/HEADERS/QUICK-CART
+    // END: HEADER
+    // END: LAYOUT/HEADERS/HEADER-1
+    // BEGIN: CONTENT/USER/FORGET-PASSWORD-FORM
+    #forget-password-form.modal.fade.c-content-login-form(role='dialog')
+      .modal-dialog
+        .modal-content.c-square
+          .modal-header.c-no-border
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body
+            h3.c-font-24.c-font-sbold ¿No puedes iniciar sesión?
+            p Proporcionanos tu correo que esté asociado a esta cuenta para facilitar el proceso de recuperación de contraseña.
+            form
+              .form-group
+                label.hide(for='forget-email') Email
+                input#forget-email.form-control.input-lg.c-square(type='email', placeholder='Email')
+              .form-group(style='text-align:center;')
+                button.btn.c-theme-btn.btn-md.c-btn-uppercase.c-btn-bold.c-btn-square.c-btn-login(type='submit') Recuperar
+          
+    // END: CONTENT/USER/FORGET-PASSWORD-FORM
+    
+    
+    
+    // BEGIN: PAGE CONTAINER
+    .c-layout-page
+      // BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-2
+      .c-layout-breadcrumbs-1.c-subtitle.c-fonts-uppercase.c-fonts-bold.c-bordered.c-bordered-both
+        .container
+          .c-page-title.c-pull-left
+            h3.c-font-uppercase.c-font-sbold Iniciar Sesión / Registrarse
+            h4 Ingresa para saber de más novedades
+          
+      // END: LAYOUT/BREADCRUMBS/BREADCRUMBS-2
+      // BEGIN: PAGE CONTENT
+      // BEGIN: CONTENT/SHOPS/SHOP-LOGIN-REGISTER-1
+      .c-content-box.c-size-md.c-bg-white
+        .container
+          .c-shop-login-register-1
+            .row
+              .col-md-6
+                .panel.panel-default.c-panel
+                  .panel-body.c-panel-body
+                    form.c-form-login
+                      .form-group.has-feedback
+                        input#login_username.form-control.c-square.c-theme.input-lg(type='text', placeholder='Usuario')
+                        span.glyphicon.glyphicon-user.form-control-feedback.c-font-grey
+                      .form-group.has-feedback
+                        input#login_password.form-control.c-square.c-theme.input-lg(type='password', placeholder='Contraseña')
+                        span.glyphicon.glyphicon-lock.form-control-feedback.c-font-grey
+                      .row.c-margin-t-40
+                        .col-xs-8
+                          .c-checkbox
+                            input#checkbox1-77.c-check(type='checkbox')
+                            label(for='checkbox1-77')
+                              span.inc
+                              span.check
+                              span.box
+                              |  Recuerdame
+                          a.c-btn-forgot(href='javascript:;', data-toggle='modal', data-target='#forget-password-form', data-dismiss='modal') ¿ Olvidaste tu contraseña ?
+                        .col-xs-4
+                          button#btn_login.pull-right.btn.btn-lg.c-theme-btn.c-btn-square.c-btn-uppercase.c-btn-bold(type='button') Ingresar
+
+
+              .col-md-6
+                .panel.panel-default.c-panel
+                  .panel-body.c-panel-body
+                    .c-content-title-1
+                      h3.c-left
+                        i.icon-user
+                        |  ¿ Aún no te has registrado ?
+                      .c-line-left.c-theme-bg
+                      p Únete a nosotros y disfruta de compras en línea hoy
+                    .c-margin-fix
+                      .c-checkbox.c-toggle-hide(data-object-selector='c-form-register', data-animation-speed='600')
+                        input#checkbox6-444.c-check(type='checkbox')
+                        label(for='checkbox6-444')
+                          span.inc
+                          span.check
+                          span.box
+                          |  Registrarse
+                    form.c-form-register.c-margin-t-20
+                      .form-group
+                        label.control-label Country
+                        select#input_country.form-control.c-square.c-theme
+                          option(value='Peru') Perú
+                      .form-group
+                        label.control-label Departamento / Ciudad
+                        input#input_city.form-control.c-square.c-theme(type='text', placeholder='Departamento / Ciudad')
+                      .form-group
+                        .row
+                          .col-md-6
+                            label.control-label Nombres
+                            input#input_name.form-control.c-square.c-theme(type='text', placeholder='Nombres')
+                          .col-md-6
+                            label.control-label Apellidos
+                            input#input_lastname.form-control.c-square.c-theme(type='text', placeholder='Apellidos')
+                      .form-group
+                        label.control-label Dirección
+                        input#input_address.form-control.c-square.c-theme(type='text', placeholder='Ca. Principal 150')
+                      .form-group
+                        input#input_address_optional.form-control.c-square.c-theme(type='text', placeholder='Departamente 503, 5to piso (opcional)')
+                      
+                      
+                      .row
+                        .form-group.col-md-6
+                          label.control-label Email
+                          input#input_mail.form-control.c-square.c-theme(type='email', placeholder='Email Address')
+                        .col-md-6
+                          label.control-label Teléfono
+                          input#input_phone.form-control.c-square.c-theme(type='tel', placeholder='Phone')
+                      .form-group
+                        label.control-label Contraseña de usuario
+                        input#input_password.form-control.c-square.c-theme(type='password', placeholder='Password')
+                      .form-group.c-margin-t-40
+                        .alert.alert-danger(style='display:none;' role='alert') Uy! Es necesario que llene los datos obligatorios.
+                        .alert.alert-warning(style='display:none;' role='alert') Oh! La dirección de correo ya se encuentra registrada.
+                        .alert.alert-success(style='display:none;' role='alert') ¡Listo! Tu cuenta ha sido registrada correctamente.
+                        button#btn_register.btn.btn-lg.c-theme-btn.c-btn-square.c-btn-uppercase.c-btn-bold(type='button') Registrarse
+            //
+              .row
+                .col-md-12
+                  .list-unstyled.c-bs-grid-small-space
+                    .row
+                      .col-md-4.col-sm-4.c-margin-t-10
+                        a.btn.btn-block.btn-social.c-btn-square.c-btn-uppercase.btn-md.btn-twitter
+                          i.fa.fa-twitter
+                          |  Sign in with Twitter
+                      .col-md-4.col-sm-4.c-margin-t-10
+                        a.btn.btn-block.btn-social.c-btn-square.c-btn-uppercase.btn-md.btn-facebook
+                          i.fa.fa-facebook
+                          |  Sign in with Facebook
+                      .col-md-4.col-sm-4.c-margin-t-10
+                        a.btn.btn-block.btn-social.c-btn-square.c-btn-uppercase.btn-md.btn-google
+                          i.fa.fa-google-plus
+                          |  Sign in with Google
+      // END: CONTENT/SHOPS/SHOP-LOGIN-REGISTER-1
+      // END: PAGE CONTENT
+    // END: PAGE CONTAINER
+    // BEGIN: LAYOUT/FOOTERS/FOOTER-6
+    a(name='footer')
+    include index_footer
+    // END: LAYOUT/FOOTERS/FOOTER-6
+    // BEGIN: LAYOUT/FOOTERS/GO2TOP
+    .c-layout-go2top
+      i.icon-arrow-up
+    // END: LAYOUT/FOOTERS/GO2TOP
+    // BEGIN: LAYOUT/BASE/BOTTOM
+    // BEGIN: CORE PLUGINS
+    //if lt IE 9
+      script(src='../assets/global/plugins/excanvas.min.js')
+    script(src='assets/plugins/jquery.min.js', type='text/javascript')
+    script(src='assets/plugins/jquery-migrate.min.js', type='text/javascript')
+    script(src='assets/plugins/bootstrap/js/bootstrap.min.js', type='text/javascript')
+    script(src='assets/plugins/jquery.easing.min.js', type='text/javascript')
+    script(src='assets/plugins/reveal-animate/wow.js', type='text/javascript')
+    script(src='assets/base/js/scripts/reveal-animate/reveal-animate.js', type='text/javascript')
+    // END: CORE PLUGINS
+    // BEGIN: LAYOUT PLUGINS
+    script(src='assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js', type='text/javascript')
+    script(src='assets/plugins/owl-carousel/owl.carousel.min.js', type='text/javascript')
+    script(src='assets/plugins/counterup/jquery.counterup.min.js', type='text/javascript')
+    script(src='assets/plugins/counterup/jquery.waypoints.min.js', type='text/javascript')
+    script(src='assets/plugins/fancybox/jquery.fancybox.pack.js', type='text/javascript')
+    script(src='assets/plugins/smooth-scroll/jquery.smooth-scroll.js', type='text/javascript')
+    script(src='assets/plugins/slider-for-bootstrap/js/bootstrap-slider.js', type='text/javascript')
+    // END: LAYOUT PLUGINS
+    // BEGIN: THEME SCRIPTS
+    script(src='assets/base/js/components.js', type='text/javascript')
+    script(src='assets/base/js/components-shop.js', type='text/javascript')
+    script(src='assets/base/js/app.js', type='text/javascript')
+    script(src='/js/js.cookie.js' + cache_)
+    script(src='/js/session_login.js' + cache_)
+    script(src='/js/login.js' + cache_)
+    script.
+      $(document).ready(function()
+      {
+      App.init(); // init core
+      });
+    // END: THEME SCRIPTS
+    // END: LAYOUT/BASE/BOTTOM
+    script.
+      

@@ -1,0 +1,21 @@
+.pagination
+	if pagination && pagination.last_page != 1
+		ul.pagination
+			if pagination.has_previous_page
+				li 
+					a(href="#", data-page=1)
+						i.fa.fa-angle-double-left
+				li
+					a(href="#", data-page=pagination.previous_page)
+						i.fa.fa-angle-left
+			for(var i = pagination.first_page; i <= pagination.last_page; i++ ){
+				li(class=pagination.current_page == i ? 'active' : '')
+					a(href="#", data-page=i)=i
+			}
+			if pagination.has_next_page
+				li
+					a(href="#", data-page=pagination.next_page) 
+						i.fa.fa-angle-right
+				li 
+					a(href="#", data-page=pagination.total_pages)
+						i.fa.fa-angle-double-right
